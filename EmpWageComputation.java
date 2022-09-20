@@ -7,36 +7,40 @@ public class EmpWageComputation {
 	
 	public static void main(String[] args) {
 		System.out.println("*****Welcome To Employee Wage Computation*****\n");
-		Company.totalWage();
-	}
-	
-	static class Company{
-		public final static int PER_HR_EMP_WAGE = 20; 
-		public final static int HR_PER_DAY = 8; 
-		public final static int PART_TIME_HR = 4; 
-		int rand = (int) (Math.random() * 3);
-		static int workingDays;
-		static int workingHrs;
-		public final static int TOTAL_WORKING_HRS = 100; 
-		public final static int TOTAL_WORKING_DAYS = 20; 
-
-		static Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		
-		public static void totalWage() {
-			System.out.println("Enter a working days of employee - ");
-			workingDays = input.nextInt();
-			System.out.println("Enter a working Hours of employee - ");
-			workingHrs = input.nextInt();
-			int dailyEmpWage = PER_HR_EMP_WAGE * HR_PER_DAY;
-			int totalWage = dailyEmpWage * workingDays;
-			if(workingDays <= TOTAL_WORKING_DAYS || workingHrs <= TOTAL_WORKING_HRS ) {
-				System.out.println("working days of employee is " + workingDays +" "+"and Total working hours is "+ " "+workingHrs+" "+ "and employee wage is "+ totalWage +" "+ "Rs only" );
-			}
-			
-		}
-	}
-	
-	
-	
+		 Company company1 = new Company("Mastang", 45, 18, 120);
+		    System.out.println(company1);
 
+		    Company company2 = new Company("Rolls Royals", 50, 15, 150);
+		    System.out.println(company2);
+	}
 }
+	
+	class Company{
+		static short fullTimeHrs = 10;
+		static short partTimeHrs = 3;
+		String companyName = " ";
+		int wagePerHr;
+		int daysToWork;
+		int hrsToWork;
+		int monthlywage;
+		int totlaHrsWorked;
+		int totalDaysWorked;
+		
+		 public Company(String companyName, int wagePerHr, int daysToWork, int hrsToWork) {
+			    this.companyName = companyName;
+			    this.wagePerHr = wagePerHr;
+			    this.daysToWork = daysToWork;
+			    this.hrsToWork = hrsToWork;
+			   
+
+	}
+		 public String toString() {
+			return  "\n Employee worked in " + companyName + " has made " + monthlywage + " Rs by working " + totlaHrsWorked + " hours in " + totalDaysWorked + " days this month ";
+			
+		 }
+		 
+	
+	}
+
