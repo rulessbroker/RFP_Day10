@@ -32,5 +32,4 @@ public class CompanyEmpWage {
 	    System.out.println("\nDaily wage array " + dailyWageArr);
 	    return "Employee at " + name + " makes " + monthlyEmpWage + "$ a month.";
 	  }
-
 }

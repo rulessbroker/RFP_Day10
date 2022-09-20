@@ -12,5 +12,7 @@ public interface EmpWageService {
 	  short getDailyWage(short empWagePerHr);
 
 	  String checkAttendance();
-	}
+
+	  }
+
 
