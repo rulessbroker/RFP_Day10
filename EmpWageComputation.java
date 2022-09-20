@@ -2,6 +2,8 @@ package com.bridgelabz.empwageoops;
 
 import java.util.Scanner;
 
+import com.bridgelabz.newempwage.Company;
+
 public class EmpWageComputation {
 	
 	
@@ -14,6 +16,23 @@ public class EmpWageComputation {
 
 		    Company company2 = new Company("Rolls Royals", 50, 15, 150);
 		    System.out.println(company2);
+		    
+		    System.out.print("\nEnter company name ==> ");
+		    String companyName = input.nextLine();
+
+		    System.out.print("Enter the company wage per hour =");
+		    int wagePerHr = input.nextShort();
+
+		    System.out.print("Enter the number of days to work per month = ");
+		    int daysToWork = input.nextShort();
+
+		    System.out.print("Enter the number of hours per month = ");
+		    int hrsToWork = input.nextShort();
+		    input.close();
+		
+		Company name = new Company(companyName, wagePerHr, daysToWork, hrsToWork);
+		System.out.println(name);
+		
 	}
 }
 	
