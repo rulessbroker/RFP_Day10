@@ -12,7 +12,7 @@ public class EmpWageComputationController {
 
 		    empWageBuilder.getMonthlyWage();
 
-		    
+		    empWageBuilder.getWageByCompany();
 		  }
 
 }
